@@ -15,12 +15,10 @@ mongoose.connect('mongodb://127.0.0.1:27017/tokopedia-play', {
   useUnifiedTopology: true,
 });
 
-// Import routes
 const videoRoutes = require('./routes/videoRoutes');
 const productRoutes = require('./routes/productRoutes');
 const commentRoutes = require('./routes/commentRoutes');
 
-// Use routes
 app.use('/api/videos', videoRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/comments', commentRoutes);

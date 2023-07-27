@@ -7,8 +7,8 @@ The database structure of Tokopedia Play Clone consists of three main collection
 1. `videos` collection:
    - `videoID`: A unique identifier for the video (UUID generated using the `uuid` package).
    - `thumbnailUrl`: URL to the video's thumbnail image.
-   
 2. `products` collection:
+
    - `VideoID`: Reference to the video this product is associated with (MongoDB ObjectID).
    - `link`: URL to the product's page.
    - `title`: Title of the product.
@@ -30,16 +30,18 @@ The main API endpoints are as follows:
 3. `GET /api/comments/:videoID`: Get the list of comments associated with a specific video.
 4. `POST /api/comments/:videoID`: Submit a new comment for a specific video.
 
-### iii. List API request and response 
+### iii. List API request and response
 
 - GET `/api/videos`
 
   Request:
+
   ```
   GET /api/videos
   ```
 
   Response:
+
   ```json
   [
     {
@@ -60,11 +62,13 @@ The main API endpoints are as follows:
 - GET `/api/products/:videoID`
 
   Request:
+
   ```
   GET /api/products/61281b95c7bf931da4929a44
   ```
 
   Response:
+
   ```json
   [
     {
@@ -81,11 +85,13 @@ The main API endpoints are as follows:
 - GET `/api/comments/:videoID`
 
   Request:
+
   ```
   GET /api/comments/61281b95c7bf931da4929a44
   ```
 
   Response:
+
   ```json
   [
     {
@@ -108,6 +114,7 @@ The main API endpoints are as follows:
 - POST `/api/comments/:videoID`
 
   Request:
+
   ```
   POST /api/comments/61281b95c7bf931da4929a44
   Content-Type: application/json
@@ -119,6 +126,7 @@ The main API endpoints are as follows:
   ```
 
   Response (success):
+
   ```json
   {
     "message": "Comment submitted successfully.",
@@ -133,23 +141,24 @@ The main API endpoints are as follows:
   ```
 
   Response (failure):
+
   ```json
   {
     "error": "Failed to submit comment."
   }
- 
+  ```
 
- ```
+````
 ### iv. How to run in local
 
 To run the Tokopedia Play Clone API on your local machine, follow these steps:
 
 1. Clone the repository:
 
-   ```bash
-   git clone <repository-url>
-   cd TokopediaPlayClone
-   ```
+  ```bash
+  git clone <repository-url>
+  cd TokopediaPlayClone
+````
 
 2. Install dependencies:
 
